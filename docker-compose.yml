@@ -3,8 +3,8 @@ version: '3.8'
 services:
   web:
     build:
-      context: .
-      dockerfile: Dockerfile
+      context: .  
+      dockerfile: php-apache.Containerfile
     container_name: php-apache-notes
     ports:
       - "8080:80"
@@ -14,7 +14,9 @@ services:
       - db
 
   db:
-    image: mariadb:10.11
+    build:
+      context: .  
+      dockerfile: mariadb.Containerfile
     container_name: mariadb-notes
     environment:
       MYSQL_ROOT_PASSWORD: rootpassword 
