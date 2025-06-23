@@ -1,7 +1,7 @@
 <?php
 $host = 'localhost';
 $user = 'root';
-$pass = 'rootP@ass';
+$pass = 'rootpassword';
 $dbname = 'notesapp';
 
 $conn = new mysqli($host, $user, $pass, $dbname);
